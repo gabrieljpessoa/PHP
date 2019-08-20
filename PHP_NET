@@ -1,0 +1,67 @@
+file:///home/aluno.unilasalle/%C3%81rea%20de%20Trabalho/PHP%20TDD_%20Desenvolvimento%20Guiado%20a%20Testes.html
+
+https://phpunit.readthedocs.io/pt_BR/latest/installation.html
+
+<?php
+class Aluno {
+  private $nome;
+  private $turma;
+  private $idade;
+  private $notaGeral;
+  private $matricula;
+ 
+  //Construtor da classe
+  public function __construct($nome, $turma, $idade, $matricula) {
+    $this->nome = $nome;
+    $this->turma = $turma;
+    $this->idade = $idade;
+    $this->matricula = $matricula;
+  }
+ 
+  public function atribuirNota($n1,$n2,$n3) {
+    $notas = array();
+    array_push($notas, $n1,$n2,$n3);
+    $this->notaGeral = array_sum($notas);
+  }
+ 
+  public function getTurma() {
+    return $this->turma;
+  }
+ 
+  public function getNotaGeral() {
+    return $this->notaGeral;
+  }
+ 
+  public function getMatricula() {
+    return $this->matricula;
+  }
+}
+ ?>
+
+#####################################################################
+
+Teste do codigo php ... class Aluno
+
+<?php
+require_once '../../../src/Application/Exemplo/aluno.php';
+class AlunoTest extends Aluno{
+    public function testarNumeroMatricula() { }
+    public function testarTurma() { }
+    public function testarNota() { }
+}
+?>
+
+framework para testes TDD em PHP
+TDD = metodologia orientada a testes 
+
+https://phpunit.de/
+
+Composer,  o gerenciador de dependências do PHP
+
+https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-composer-no-ubuntu-18-04-pt
+
+https://getcomposer.org/download/
+
+Composer install
+s
+
